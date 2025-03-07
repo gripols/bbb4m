@@ -1,16 +1,10 @@
-\lesson{3}{6 February 2025 9:00}{Chapter 1}
+%\lesson{3}{6 February 2025 9:00}{Chapter 1}
 
 \begin{definition}[Globalization]
-    The process whereby national or regional 
-    economies and cultures have become integrated through:
-    \begin{itemize}
-        \item New global communication technologies.
-        \item Foreign direct investment.
-        \item International trade.
-        \item Migration.
-        \item New forms of transportation.
-        \item Flow of money.
-    \end{itemize}
+The process whereby national or regional economies and 
+cultures have become integrated through many methods,
+such as foreign direct investment, international trade, migration, 
+new forms of transportation, and the flow of money. 
 \end{definition}
 
 \subsection{History of Globalization (not on test)}
@@ -33,17 +27,31 @@
 \end{itemize}
 
 \begin{definition}[Multiplier Effect]
-    When an entity (such as the government, businesses, or individuals) spends money, it generates income for others, who in turn spend that income, creating a ripple effect through the economy.
+    When an entity (such as the government, businesses, or individuals) spends money, 
+    it generates income for others, who in turn spend that income, creating a ripple 
+    effect through the economy.
 \end{definition}
+\begin{center}
+\begin{tikzpicture}[
+    node distance=3cm,
+    auto,
+    >=stealth',
+    every node/.style={align=center}
+]
 
-\begin{tikzpicture}[->,scale=.7]
-   \node (i) at (90:1cm)  {$i$};
-   \node (j) at (-30:1cm) {$j$};
-   \node (k) at (210:1cm) {$k$};
-%   \node (l) at () {$l};
-%   \node (m) at () {$m};
+% Define nodes
+\node[circle, draw, minimum size=2cm] (spending) {Spending};
+\node[circle, draw, minimum size=2cm, right=of spending] (income) {Income};
+\node[circle, draw, minimum size=2cm, below=of income] (reinvestment) {Reinvestment};
+\node[circle, draw, minimum size=2cm, left=of reinvestment] (production) {Production};
 
-   \draw (70:1cm)  arc (70:-10:1cm);
-   \draw (-50:1cm) arc (-50:-130:1cm);
-   \draw (190:1cm) arc (190:110:1cm);
+% Draw arrows
+\draw[->, thick] (spending) to [bend left=30] node[midway, above] {Money Spent} (income);
+\draw[->, thick] (income) to [bend left=30] node[midway, right] {Income Reinvested into Business} (reinvestment);
+\draw[->, thick] (reinvestment) to [bend left=30] node[midway, below] {Business Produces More} (production);
+\draw[->, thick] (production) to [bend left=30] node[midway, left] {More Money Spent} (spending);
 \end{tikzpicture}
+   
+\end{center}
+% TODO: Create circle graph.
+\pagebreak
