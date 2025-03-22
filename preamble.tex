@@ -70,7 +70,7 @@
 
 % si unitx
 \usepackage{siunitx}
-\sisetup{locale = FR}
+\sisetup{locale = US}
 % \renewcommand\vec[1]{\mathbf{#1}}
 \newcommand\mat[1]{\mathbf{#1}}
 
@@ -216,13 +216,13 @@
 %   \thm@preskip=\parskip \thm@postskip=0pt
 % }
 
-\newcommand{\oefening}[1]{%
-    \def\@oefening{#1}%
-    \subsection*{Oefening #1}
+\newcommand{\opening}[1]{%
+    \def\@opening{#1}%
+    \subsection*{Opening #1}
 }
 
-\newcommand{\suboefening}[1]{%
-    \subsubsection*{Oefening \@oefening.#1}
+\newcommand{\subopening}[1]{%
+    \subsubsection*{Opening \@opening.#1}
 }
 
 \newcommand{\exercise}[1]{%
@@ -260,13 +260,10 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-% \fancyhead[LE,RO]{Gregory Polstvin}
 \fancyhead[RO,LE]{\@lesson}
 \fancyhead[RE,LO]{}
 \fancyfoot[LE,RO]{\thepage}
 \fancyfoot[C]{\leftmark}
-
-\makeatother
 
 % notes
 % \usepackage{todonotes}
